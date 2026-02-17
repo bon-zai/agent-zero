@@ -4,6 +4,12 @@ from datetime import datetime
 from collections.abc import Mapping
 from . import files
 
+# Reconfigure stdout/stderr to handle Unicode on Windows (cp1252 can't encode emoji etc.)
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(errors='replace')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(errors='replace')
+
 _runtime_module = None
 
 

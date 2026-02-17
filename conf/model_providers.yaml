@@ -68,6 +68,9 @@ chat:
   azure:
     name: OpenAI Azure
     litellm_provider: azure
+  azure_anthropic:
+    name: Azure Anthropic (Claude)
+    litellm_provider: anthropic
   bedrock:
     name: AWS Bedrock
     litellm_provider: bedrock
